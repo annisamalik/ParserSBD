@@ -1,0 +1,13 @@
+select * from buku where isbn = 100;
+PROJECTION isbn, judul, penulis, tahun, penerbit -- on the fly
+SELECTION isbn = 100 -- A2
+buku
+Cost : 3 blok transfer dan 3 seek
+
+
+select * from buku join koleksi using (isbn);
+PROJECTION isbn, judul, penulis, tahun, penerbitid_koleksi, id_perpus, isbn -- on the fly
+JOIN buku.isbn = koleksi.isbn -- BNLJ
+koleksi buku
+Cost (worst case): 159528 blok transfer dan 204 seek
+

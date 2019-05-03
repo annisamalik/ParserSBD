@@ -1,0 +1,4 @@
+P,4,B,8192
+buku,ISBN,judul,penulis,tahun,penerbit,R,128,n,100000,V,12
+perpustakaan,id_perpus,nama_perpus,alamat,no_telp,R,64,n,40000,V,6
+koleksi,id_koleksi,id_perpus,ISBN,R,32,n,26000,V,7

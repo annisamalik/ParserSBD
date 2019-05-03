@@ -1,0 +1,36 @@
+Annisa Aisyha Malik - 1301170031
+Rizka Vio Octriany IS - 1301170121
+Annisa Rahmah Sari - 1301174237
+
+Contoh Query yang dapat dijalankan:
+
+SELECT BIASA
+select * from perpustakaan;
+select * from buku;
+select * from koleksi;
+select id_koleksi, isbn from koleksi;
+select isbn, judul from buku;
+select nama_perpus, id_perpus from perpustakaan;
+
+SELECT dengan kondisi
+select * from perpustakaan where id_perpus = input;
+select * from buku where judul = input;
+select * from koleksi where id_koleksi = input;
+select * from perpustakaan where id_perpus = input and nama_perpus = adalah;
+select * from buku where judul = input and isbn = adalah;
+select * from koleksi where id_perpus = input and isbn = adalah;
+select nama_perpus from perpustakaan where id_perpus = input and nama_perpus = adalah;
+select id_koleksi from koleksi where id_perpus = input and isbn = adalah;
+select judul, isbn from buku where isbn = input and judul = adalah;
+
+JOIN
+select * from buku join koleksi using (isbn);
+select * from perpustakaan join koleksi using (id_perpus);
+select * from koleksi join perpustakaan using (id_perpus);
+select * from koleksi join buku using (isbn);
+
+select judul, id_koleksi, isbn from buku join koleksi using (isbn);
+select judul, id_koleksi, isbn, id_perpus from koleksi join buku using (isbn);
+select nama_perpus, isbn, id_koleksi from perpustakaan join koleksi using (id_perpus);
+select nama_perpus, isbn, id_koleksi from koleksi join perpustakaan using (id_perpus);
+
